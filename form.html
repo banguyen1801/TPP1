@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Argue</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+  </head>
+  <body>
+    <div class="nav-container">
+      <a href="index.html" id="argue">Argue</a>
+      <a href="hover.html" id="hover">Hover</a>
+      <a href="form.html" id="form">Form</a>
+      <a href="sphereRadius.html" id="sphereRadius">Sphere Radius</a>
+    </div>
+      <div class="content">
+          <h1 id="h1"></h1>
+            <form>
+                <label for="name">Name:</label>
+                <input id="name" type="text" name="name">
+                <br>
+                <label for="email">Email:</label>
+                <input id="email" type="text" name="email">
+                <br>
+                <label for="pwd">Password:</label>
+                <input id="pwd" type="password" name="pwd" >
+                <br>
+                <button onclick="checkPwd()">Sign In</button>
+                    
+            </form>
+      </div>
+  </body>
+  <script type="text/javascript">
+  let checkPwd = function() {
+    event.preventDefault();
+    if(document.getElementById("pwd").value !== "12345678"){
+      alert("Wrong password!!!");
+    }else {
+      document.getElementById("h1").innerHTML =
+      document.getElementById("name").value + " " +
+      document.getElementById("email").value + " " +
+      document.getElementById("pwd").value;
+    }
+
+    document.getElementById("name").value ="";
+    document.getElementById("email").value="";
+    document.getElementById("pwd").value = "";
+  };
+        
+  </script>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Argue</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+  </head>
+  <body>
+    <div class="nav-container">
+      <a href="index.html" id="argue">Argue</a>
+      <a href="hover.html" id="hover">Hover</a>
+      <a href="form.html" id="form">Form</a>
+      <a href="sphereRadius.html" id="sphereRadius">Sphere Radius</a>
+    </div>
+    
+      <div class="content">
+          <h1 id="h1">Insert your sphere Radius</h1>
+            <form>
+                <label for="radius">Radius</label>
+                <input id="radius" type="text" name="radius" >
+                <button onclick="calRadius()">Calculate Radius</button>
+            </form>
+      </div>
+    
+    
+  </body>
+  <!-- <script src="js/form.js"></script> -->
+  <script type="text/javascript">
+        let calRadius = function() {
+            event.preventDefault();
+            if (document.getElementById("radius").value >= 0){
+                let r =  document.getElementById("radius").value;
+                let v = (4 / 3) * Math.PI * Math.pow(r , 3);
+                alert("Volumn of the sphere is " + v.toFixed());
+            }
+            
+        };
+</script>
+
+</html>
